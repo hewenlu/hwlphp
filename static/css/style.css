@@ -1,0 +1,90 @@
+/**{margin:0;padding: 0;}
+body{font-size: 14px;}
+li{list-style: none;float: left;}
+a{text-decoration: none!important}
+ul{margin: 0!important}
+*/
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0} 
+body {
+    font-family: PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,Helvetica Neue,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #657180;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+a{color:#2d374b;text-decoration:none} 
+a:hover{text-decoration:none;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+em{font-style:normal} 
+li{list-style:none} 
+img{border:0;vertical-align:middle} 
+table{border-collapse:collapse;border-spacing:0} 
+p{word-wrap:break-word}
+/*外边距*/
+.m_auto{margin: 0 auto;}
+.mr_30{margin-right: 30px;}
+.mr_20{margin-right: 20px;}
+.mt_20{margin-top: 20px;}
+.mt_10{margin-top: 10px;}
+.p_20{padding:20px;}
+/*浮动*/
+.fl{float: left;}
+.fr{float: right;}
+.clear{clear: both;}
+/*边框*/
+.br{border-right:1px solid #3c3f41;}
+.bb{border-bottom:1px solid #eee!important}
+.check{color: #ed4040;border-bottom:2px solid #ed4040;height: 44px;line-height: 44px;}
+
+/*顶部*/
+nav{background-color: #222222;height: 34px;line-height: 34px;}
+nav ul li{float: left;}
+nav ul:nth-child(1) li{padding: 0 10px;}
+nav ul:nth-child(1) li:nth-child(1){border-right: 1px solid #3a3a3a;}
+nav ul:nth-child(2) li{padding: 0 10px;border-right: 1px solid #3a3a3a;}
+nav ul li a{color: #fff;font-size: 14px}
+nav ul li a:hover{color: #fff;}
+
+/*主体*/
+.main{width: 1170px;margin:16px auto 0;}
+
+/*左边菜单*/
+.main .main_left{width:110px; }
+.main .main_left a[title]{display: block;
+    text-align: center;
+    font-size: 16px;
+    height: 40px;line-height: 40px;
+    color: #212121;
+    border-radius: 6px;
+}
+.main .main_left a[title]:hover{
+    background-color: #ed4040;
+    color: #fff;
+}
+
+/*中间部分*/
+.main .main_middle{width:660px; }
+.main .main_middle .msg{width: 100%;border:solid 1px #eee;}
+.main .main_middle .msg .msg_title{border-bottom:solid 1px #eee;}
+.main .main_middle .msg .msg_title li{float: left;height: 44px;line-height: 44px;
+font-size: 15px;margin-left: 19px;}
+.main_middle .msg .msg_txt{position: relative;}
+.main_middle .msg .msg_txt textarea{background-color: #f4f5f6; width: 100%;height: 100px;
+    display: block;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 13px 19px;
+    border: 0;
+    outline: 0;
+    resize: none;}
+.main_middle .msg .msg_txt .num_txt{
+    position: absolute;bottom: 10px;right: 10px;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 50px;
+    padding: 0 8px;
+    color: #fff;
+}
+/*右边部分*/
+.main .main_right{width:340px; }
