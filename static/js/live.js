@@ -86,16 +86,40 @@ $(function(){
       num3.innerHTML= m3;
     }
 
-//表情包
-for(var i=1;i<60;i++){
-  $('.emoji').append("<img src='static/images/emoji/f"+i+".png' width='20'/>");
-}
-$('.Emoji_tit').click(function(){
-  $('.Emoji').toggle();
-})
-$('.close').click(function(){
-  $('.Emoji').hide();
-})
+    //表情包
+    for(var i=1;i<60;i++){
+      $('.emoji').append("<img src='static/images/emoji/f"+i+".png' width='20'/>");
+    }
+    $('.Emoji_tit').click(function(){
+      $('.Emoji').toggle();
+    })
+    $('.close').click(function(){
+      $('.Emoji').hide();
+    })
+
+    //删除new_list列表内容
+    $(document).on('click','.remove',function(){
+        $(this).parents('.new_list').remove();
+    })
+
+    //点击发布添加new_list内容
+    $(document).on('click','.btn',function(){
+        var new_tit = $(this).parents('.msg_tab').find('textarea').val();
+        $('.msg').after("<div class='new_list bb clearfix'><div class='fl' style='width:100%;'><a href='' class='strong'>"+new_tit+"</a><p class='mt_10'><span class='blue'>时政</span><span><img src='static/images/a.jpg' width='18'>  央视新闻网</span><span>.人评论</span><span>.时间</span><span class='fa fa-close remove fr'>不感兴趣</span></p></div></div>");
+        $(this).parents('.msg_tab').find('textarea').val("");//清空输入文本域
+        $(this).parents('.msg_tab').find('#num1,#num2,#num3').text("0");//清空输入字数
+        $(this).addClass("disabled"); //按钮禁用
+    })
+
+    //左边菜单悬停
+    $(window).scroll(function(){
+        if($(this).scrollTop()>60){
+            $('.main_left').css('top','10px');
+        }else{
+            $('.main_left').css('top','60px');
+        }
+    })
+    
 
 })
 
