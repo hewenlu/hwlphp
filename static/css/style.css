@@ -51,25 +51,25 @@ nav ul li a:hover{color: #fff;}
 .main{width: 1170px;margin:16px auto 0;}
 
 /*左边菜单*/
-.main .main_left{width:110px; }
-.main .main_left a[title]{display: block;
+.main_left{width:110px; }
+.main_left a[title]{display: block;
     text-align: center;
     font-size: 16px;
     height: 40px;line-height: 40px;
     color: #212121;
     border-radius: 6px;
 }
-.main .main_left a[title]:hover{
+.main_left a[title]:hover{
     background-color: #ed4040;
     color: #fff;
 }
 
 /*中间部分*/
-.main .main_middle{width:660px; }
-.main .main_middle .msg{width: 100%;border:solid 1px #eee;}
-.main .main_middle .msg .msg_title{border-bottom:solid 1px #eee;}
-.main .main_middle .msg .msg_title li{float: left;height: 44px;line-height: 44px;
-font-size: 15px;margin-left: 19px;}
+.main_middle{width:660px; }
+.main_middle .msg{width: 100%;border:solid 1px #eee;}
+.main_middle .msg .msg_title{border-bottom:solid 1px #eee;}
+.main_middle .msg .msg_title li{float: left;height: 44px;line-height: 44px;
+font-size: 15px;margin-left: 19px;cursor: pointer;}
 .main_middle .msg .msg_txt{position: relative;}
 .main_middle .msg .quest textarea{
     background-color: #f4f5f6; width: 100%;height: 60px!important;
@@ -110,19 +110,21 @@ font-size: 15px;margin-left: 19px;}
 }
 .main_middle .msg .msg_list{
     height: 40px;
+    line-height: 40px;
+    position: relative;
 }
 .main_middle .msg .msg_list span{
     font-size: 14px;
     color: #888;
     float: left;
-    margin: 10px 0 10px 20px;
+    margin: 0px 0 0px 20px;
     cursor: pointer;
 }
 .main_middle .msg .msg_list span i{
     font-size: 21px;
     float: left;
     vertical-align: middle;
-    margin-right: 5px;
+    margin: 9px 5px 0 0;
 }
 .main_middle .msg .msg_list .btn{
     width: 120px;
@@ -131,10 +133,64 @@ font-size: 15px;margin-left: 19px;}
     color: #fff;
     border-radius: 0;
     cursor: pointer!important;
+    outline: none;
 }
 
 
+/*表情包*/
+.Emoji{
+    display: none;
+    line-height: 25px;
+    position:absolute; top: 40px;right: 100px;
+    width: 380px;
+    padding: 20px 5px 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 5px;
+}
+.emoji img{margin: 4px;}
+/*小箭头*/
+.arrow{position:absolute; top: -14px;left: 26px;
+    width: 0;height: 8px;
+    border:8px solid;
+    border-color: transparent transparent #fff transparent;
+}
+.close{position:absolute;top: 5px;right: 10px; }
 
 
 /*右边部分*/
-.main .main_right{width:340px; }
+.main_right{width: 340px;}
+.main_right input{
+    border:none;
+    outline: none;
+    height:45px;
+}
+.main_right input[type="text"]{
+    width:260px;
+    padding-left: 10px;
+    border:1px solid #eee;
+    border-right:none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #f4f5f6;
+    font-size: 14px;
+
+}
+.main_right input[type="button"]{
+    width:80px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #208eda;
+    color: #fff;
+    font-size: 14px;
+
+}
+.advert{background-color:#f4f5f6; }
+.login{background-color: #fff;text-align: center;}
+.login p{color: #777;font-size: 12px;}
+.login input[type="button"]{
+    width: 260px;
+    height:40px;
+    background-color: #ed4040;
+    border-radius: 5px;
+}

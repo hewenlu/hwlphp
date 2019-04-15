@@ -50,50 +50,65 @@
 			<!-- 发布图文 -->
 			<div class="msg_tab">
 				<div class="msg_txt">
-					<textarea placeholder="有什么新鲜事要告诉大家" class="bb"></textarea>
-					<span class="num_txt"><span class="num">0</span>/2000字</span>
+					<textarea placeholder="有什么新鲜事要告诉大家" class="bb" id="area1"></textarea>
+					<span class="num_txt"><span id="num1">0</span>/2000字</span>
 				</div>
 				<div class="msg_list clearfix">
                     <span><i class="fa fa-image" style="color: #ed4040;"></i> 添加图片</span>
                     <span id="big"><i class="fa fa-square-o"></i>发布长文</span>
                     <span class="Emoji_tit"><img src="static/images/a.png" width="20"></span>
-                       <div class="Emoji" style="display: none;">
+                       <div class="Emoji">
                             <span class="arrow"></span>
                             <span class="fa fa-close close"></span>
                             <div class="emoji"></div>
                        </div>
-                    <button class="fr btn disabled">发布</button>
+                    <button class="fr btn disabled" id="btn">发布</button>
                 </div>
             </div>
             <!-- 发布视频 -->
             <div class="msg_tab" style="display: none;">
 				<div class="msg_txt">
-					<textarea placeholder="视频标题（30字以内）" class="bb"></textarea>
-					<span class="num_txt"><span class="num">0</span>/30字</span>
+					<textarea placeholder="视频标题（30字以内）" class="bb" id="area2"></textarea>
+					<span class="num_txt"><span id="num2">0</span>/30字</span>
 				</div>
 				<div class="msg_list clearfix">
                     <span><i class="fa fa-video-camera" style="color: #2A90DA;"></i> 添加视频</span>
-                    <button class="fr btn disabled">发布</button>
+                    <button class="fr btn disabled" id="btn2">发布</button>
                 </div>
             </div>
             <!-- 发布问答 -->
             <div class="msg_tab" style="display: none;">
 				<div class="msg_txt quest">
 					<input type="text" name="" placeholder="请输入问题标题（4-40字）" class="bb">
-					<textarea placeholder="添加问题背景描述（选填，0-40字）" class="bb"></textarea>
-					<span class="num_txt"><span class="num">0</span>/2000字</span>
+					<textarea placeholder="添加问题背景描述（选填，0-40字）" class="bb"  id="area3"></textarea>
+					<span class="num_txt"><span id="num3">0</span>/40字</span>
 				</div>
 				<div class="msg_list clearfix">
                     <span><i class="fa fa-image" style="color: #ed4040;"></i> 添加图片</span>
                     <span><i class="fa fa-file-text-o "></i>更多问答</span>
-                    <button class="fr btn disabled">发布</button>
+                    <button class="fr btn disabled" id="btn3">发布</button>
                 </div>
             </div>
 		</div>
 	</div>
 	<!-- 右边部分 -->
 	<div class="main_right fl">
-		
+        <form action="" method="">
+            <input type="text" name="" placeholder="请输入要搜索的内容" class="fl">
+            <input type="button" value="搜索"class="fl">
+        </form>
+        <div class="clear"></div>
+        <div class="advert mt_20 p_20">
+            <div class="login p_20">
+                <p>登录后可以保存您的浏览喜好、评论、收藏，并与APP同步更可以发布微头条</p>
+                <input type="button" name="" value="登录" class="mt_10">
+                <ul style=" width: 100px;display: inline-block; padding-top: 10px;">
+                    <li class="mr_20 fl"><a href=""><img src="static/images/QQ.svg" width="35"> <br>QQ</a></li>
+                    <li><a href=""><img src="static/images/weixin.svg" width="35"><br>微信</a></li>
+                    <div class="clear"></div>
+                </ul>               
+            </div>
+        </div>
 	</div>
 </div>
 
