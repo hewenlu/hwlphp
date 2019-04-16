@@ -98,14 +98,14 @@ $(function(){
     })
 
     //删除new_list列表内容
-    $(document).on('click','.remove',function(){
+    $(document).on('click','.remove_box',function(){
         $(this).parents('.new_list').remove();
     })
 
     //点击发布添加new_list内容
     $(document).on('click','.btn',function(){
         var new_tit = $(this).parents('.msg_tab').find('textarea').val();
-        $('.msg').after("<div class='new_list bb clearfix'><div class='fl' style='width:100%;'><a href='' class='strong'>"+new_tit+"</a><p class='mt_10'><span class='blue'>时政</span><span><img src='static/images/a.jpg' width='18'>  央视新闻网</span><span>.人评论</span><span>.时间</span><span class='fa fa-close remove fr'>不感兴趣</span></p></div></div>");
+        $('.msg').after("<div class='new_list bb clearfix'><div class='fl' style='width:100%;'><a href='' class='strong'>"+new_tit+"</a><p class='mt_10'><span class='blue'>时政</span><span><img src='static/images/a.jpg' width='18'>  央视新闻网</span><span>.人评论</span><span>.时间</span><span class='fr remove_box'><span class='remove_txt'>不感兴趣</span><span class='fa fa-close remove'></span></span></p></div></div>");
         $(this).parents('.msg_tab').find('textarea').val("");//清空输入文本域
         $(this).parents('.msg_tab').find('#num1,#num2,#num3').text("0");//清空输入字数
         $(this).addClass("disabled"); //按钮禁用
@@ -119,8 +119,23 @@ $(function(){
             $('.main_left').css('top','60px');
         }
     })
-    
 
+    //不感兴趣指向时候效果
+    $(document).on('mouseover','.remove_box',function(){
+        $(this).css('backgroundColor','#ed4040');
+        $(this).stop().animate({
+        'width': '75px',
+        },500);
+        $(this).find('.remove_txt').css('display','block');
+    })
+    //不感兴趣离开时候效果
+    $(document).on('mouseleave','.remove_box',function(){
+        $(this).css('backgroundColor','#fff');
+        $(this).stop().animate({
+          'width': '16px'
+        },50);
+        $(this).find('.remove_txt').css('display','none');
+    })
 })
 
 
